@@ -1,2 +1,2 @@
-body{background-color:red}
+body{padding:30px}h1{text-align:center}nav ul{list-style:none;width:100%;margin:0;padding:0}nav ul li{text-align:center;display:inline-block;width:20%;border:1px solid black;box-sizing:border-box;border-radius:5px;margin:0 2.5%;padding:5px 0}nav ul li.skip{border-width:3px}
 /*# sourceMappingURL=main.css.map */
