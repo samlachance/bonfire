@@ -8,6 +8,9 @@
 </div>
 
 <div class="wrapper">
+  <div class="mini-news">
+    <div><i class="fa fa-clock-o"></i> <%= "#{Time.now.hour}:#{Time.now.min}" %><div></div></div><div></div><div></div>
+  </div>
   <div class="section">
     <% feed = fetch("https://www.reddit.com/r/tldr/.rss") %>
     <h2><%= feed.title %></h2>
