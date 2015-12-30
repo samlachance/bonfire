@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'bundler'
-require 'rss'
+require 'feedjira'
 require 'sass/plugin/rack'
 
 

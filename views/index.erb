@@ -6,30 +6,29 @@
     </ul>
   </nav>
 </div>
+
 <div class="wrapper">
-  <% feed = fetch("https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&output=rss") %>
-  <h2><%= feed.channel.title %></h2>
-  <ol>
-    <% feed.items.each do |item| %>
-      <li><%= item.title %></li>
-    <% end %>
-  </ol>
   <div class="section">
-    
+    <% feed = fetch("https://www.reddit.com/r/tldr/.rss") %>
+    <h2><%= feed.title %></h2>
+    <p><a href="<%= feed.entries[1].url %>"><%= feed.entries[1].title %></a></p>
   </div>
-
   <div class="section">
-    <h2>Title</h2>
-    <p>Hammock raw denim PBR&B, migas banh mi roof party 3 wolf moon. 8-bit freegan cold-pressed schlitz, chicharrones single-origin coffee normcore. +1 3 wolf moon flannel synth. Cornhole flexitarian migas flannel, selfies kale chips pop-up pork belly yr try-hard heirloom VHS. Skateboard retro heirloom scenester intelligentsia. Yuccie mlkshk blue bottle tumblr pour-over, beard cold-pressed gastropub four dollar toast lo-fi art party kombucha tofu quinoa flexitarian. Gastropub echo park you probably haven't heard of them bitters truffaut hashtag.</p>
-    <p>Poutine drinking vinegar ugh schlitz, twee wolf mlkshk migas kinfolk biodiesel. Pitchfork whatever cornhole truffaut church-key. Craft beer normcore pinterest before they sold out, pop-up stumptown swag asymmetrical farm-to-table artisan hammock tacos literally crucifix hoodie. Ennui artisan meh vegan chicharrones godard. Squid occupy sustainable bitters photo booth cornhole. Tattooed tilde chartreuse deep v ethical, chia pug waistcoat seitan meggings. Cliche synth celiac, raw denim echo park fap freegan tote bag post-ironic bitters whatever street art.</p>
-    <p>Meh beard artisan, shabby chic offal flannel squid fashion axe waistcoat selvage etsy lomo leggings ethical. Green juice 8-bit selvage four loko franzen wolf, typewriter +1 venmo vice tacos. Tote bag locavore pug disrupt mlkshk XOXO biodiesel, bicycle rights gastropub food truck kinfolk. Jean shorts artisan normcore, scenester street art YOLO beard post-ironic organic retro kogi cardigan pork belly. YOLO you probably haven't heard of them tousled, shoreditch blog beard XOXO artisan venmo paleo wolf tacos pour-over kickstarter kogi. Ennui listicle kitsch distillery, freegan YOLO chambray. Trust fund brunch blog yuccie umami, forage pour-over ennui pabst.</p>
+    <% feed = fetch("https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&topic=tc&output=rss") %>
+    <h2><%= feed.title %></h2>
+    <ul>
+      <% feed.entries[0..3].each do |entry| %>
+      <li><a href="<%= entry.url %>"><%= entry.title %></a></li>
+      <% end %>
+    </ul>
   </div>
-
   <div class="section">
-    <h2>Title</h2>
-    <p>Hammock raw denim PBR&B, migas banh mi roof party 3 wolf moon. 8-bit freegan cold-pressed schlitz, chicharrones single-origin coffee normcore. +1 3 wolf moon flannel synth. Cornhole flexitarian migas flannel, selfies kale chips pop-up pork belly yr try-hard heirloom VHS. Skateboard retro heirloom scenester intelligentsia. Yuccie mlkshk blue bottle tumblr pour-over, beard cold-pressed gastropub four dollar toast lo-fi art party kombucha tofu quinoa flexitarian. Gastropub echo park you probably haven't heard of them bitters truffaut hashtag.</p>
-    <p>Poutine drinking vinegar ugh schlitz, twee wolf mlkshk migas kinfolk biodiesel. Pitchfork whatever cornhole truffaut church-key. Craft beer normcore pinterest before they sold out, pop-up stumptown swag asymmetrical farm-to-table artisan hammock tacos literally crucifix hoodie. Ennui artisan meh vegan chicharrones godard. Squid occupy sustainable bitters photo booth cornhole. Tattooed tilde chartreuse deep v ethical, chia pug waistcoat seitan meggings. Cliche synth celiac, raw denim echo park fap freegan tote bag post-ironic bitters whatever street art.</p>
-    <p>Meh beard artisan, shabby chic offal flannel squid fashion axe waistcoat selvage etsy lomo leggings ethical. Green juice 8-bit selvage four loko franzen wolf, typewriter +1 venmo vice tacos. Tote bag locavore pug disrupt mlkshk XOXO biodiesel, bicycle rights gastropub food truck kinfolk. Jean shorts artisan normcore, scenester street art YOLO beard post-ironic organic retro kogi cardigan pork belly. YOLO you probably haven't heard of them tousled, shoreditch blog beard XOXO artisan venmo paleo wolf tacos pour-over kickstarter kogi. Ennui listicle kitsch distillery, freegan YOLO chambray. Trust fund brunch blog yuccie umami, forage pour-over ennui pabst.</p>
+    <% feed = fetch("https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&output=rss") %>
+    <h2><%= feed.title %></h2>
+    <ul>
+      <% feed.entries[0..3].each do |entry| %>
+      <li><a href="<%= entry.url %>"><%= entry.title %></a></li>
+      <% end %>
+    </ul>
   </div>
-
 </div>
