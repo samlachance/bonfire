@@ -52,7 +52,10 @@ nav {
 
       &.skip {
         background-color: $black;
-        color: $white;
+        
+        a {
+          color: $white;
+        }
       } 
     }
   }
