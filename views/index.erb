@@ -9,11 +9,11 @@
 <div class="wrapper">
   <% feed = fetch("https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&output=rss") %>
   <h2><%= feed.channel.title %></h2>
-  <ul>
+  <ol>
     <% feed.items.each do |item| %>
       <li><%= item.title %></li>
     <% end %>
-  </ul>
+  </ol>
   <div class="section">
     
   </div>
