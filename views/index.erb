@@ -23,6 +23,15 @@
     </ul>
   </div>
   <div class="section">
+    <% feed = fetch("https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&topic=snc&output=rss") %>
+    <h2><%= feed.title %></h2>
+    <ul>
+      <% feed.entries[0..3].each do |entry| %>
+      <li><a href="<%= entry.url %>"><%= entry.title %></a></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="section">
     <% feed = fetch("https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&output=rss") %>
     <h2><%= feed.title %></h2>
     <ul>
