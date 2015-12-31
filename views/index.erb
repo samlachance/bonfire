@@ -1,47 +1,37 @@
-<div class="header">
-  <h1>Bonfire <i class="fa fa-fire"></i></h1>
-  <% date = DateTime.now %>
-  <p><%= "#{date.month}/#{date.day}/#{date.year}" %></p>
-  <nav>
-    <ul>
-      <li class="skip"><a href="#content">Skip nav</a></li><li>Reddit</li><li>Weather</li><li>Comics</li>
-    </ul>
-  </nav>
-</div>
+<%= erb :_header %>
 
 <div id="content" class="wrapper">
-  <!-- <div class="mini-news">
-    <div><i class="fa fa-calendar"></i> <%= "#{DateTime.now.month}/#{DateTime.now.day}" %><div></div></div><div></div><div></div>
-  </div> -->
   <div class="section">
     <% feed = fetch("https://www.reddit.com/r/tldr/.rss") %>
-    <h2>TL;DR</h2>
+    <h2>TL;DR</h2> <span class="update-time">Updated: <%= update_time %></span>
     <p><a href="<%= feed.entries[1].url %>"><%= feed.entries[1].title %></a></p>
   </div>
   <div class="section">
     <% feed = fetch("https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&topic=tc&output=rss") %>
-    <h2>Tech</h2>
+    <h2>Tech</h2> <span class="update-time">Updated: <%= update_time %></span>
     <ul>
-      <% feed.entries[0..3].each do |entry| %>
-      <li><a href="<%= entry.url %>"><%= entry.title %></a></li>
+      <% feed.entries[0..6].each do |entry| %>
+      <li><a href="<%= entry.url %>"><%= remove_source(entry.title) %></a></li>
       <% end %>
     </ul>
   </div>
+
   <div class="section">
     <% feed = fetch("https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&topic=snc&output=rss") %>
-    <h2>Science</h2>
+    <h2>Science</h2> <span class="update-time">Updated: <%= update_time %></span>
     <ul>
-      <% feed.entries[0..3].each do |entry| %>
-      <li><a href="<%= entry.url %>"><%= entry.title %></a></li>
+      <% feed.entries[0..6].each do |entry| %>
+      <li><a href="<%= entry.url %>"><%= remove_source(entry.title) %></a></li>
       <% end %>
     </ul>
   </div>
+
   <div class="section">
     <% feed = fetch("https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&output=rss") %>
-    <h2>Top Stories</h2>
+    <h2>Top Stories</h2> <span class="update-time">Updated: <%= update_time %></span>
     <ul>
-      <% feed.entries[0..3].each do |entry| %>
-      <li><a href="<%= entry.url %>"><%= entry.title %></a></li>
+      <% feed.entries[0..6].each do |entry| %>
+      <li><a href="<%= entry.url %>"><%= remove_source(entry.title) %></a></li>
       <% end %>
     </ul>
   </div>

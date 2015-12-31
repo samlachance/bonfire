@@ -25,3 +25,7 @@ Turns out, this giant turd has almost no documentation so most of the commits th
 
 ### Misc. weirdness
 1. Kindle browser assumes that any li (list item) in both an ol (ordered list) and ul (unordered list) are hyperlinks. Because of this, the Kindle browser cursor will automatically "cling" to the li element and display the cursor as a hand.
+
+## Lessons learned
+
+1. Life withoutflexbox is not worth living
