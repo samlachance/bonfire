@@ -12,5 +12,6 @@ end
 
 # Displays the time that the feeds are refreshed.
 def update_time
-  Time.now.strftime "%H:%M:%S"
+  formated_time = Time.now.strftime "%H:%M:%S"
+  "(updated at #{formated_time})"
 end

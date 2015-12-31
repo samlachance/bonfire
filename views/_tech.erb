@@ -1,6 +1,6 @@
 <div class="section">
   <% feed = fetch("https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&topic=tc&output=rss") %>
-  <h2>Tech</h2> <span class="update-time">Updated: <%= update_time %></span>
+  <h2>Tech</h2> <span class="update-time"><%= update_time %></span>
   <ul>
     <% feed.entries[0..6].each do |entry| %>
     <li><a href="<%= entry.url %>"><%= remove_source(entry.title) %></a></li>
