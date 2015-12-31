@@ -44,35 +44,6 @@ h1 {
   text-align: center;
 }
 
-
-nav {
-
-  ul {
-    list-style: none;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border-bottom: 2px solid $black;
-
-
-    li {
-      text-align: center;
-      display: inline-block;
-      width: 20%;
-      margin: 0 2.5%;
-      padding: 5px 0;
-
-      &.skip {
-        background-color: $black;
-        
-        a {
-          color: $white;
-        }
-      } 
-    }
-  }
-}
-
 div.mini-news {
   margin: 2em 0;
   width: 100%;
@@ -93,8 +64,17 @@ div.section {
     margin-top: 0;
     display: inline-block;
   }
+
   span.update-time {
     font-size: 0.7em;
     font-style: italic;
+  }
+
+  ul {
+    margin-top: 0;
+
+    li {
+      margin-bottom: 10px;
+    }
   }
 }
