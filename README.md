@@ -28,4 +28,4 @@ Turns out, this giant turd has almost no documentation so most of the commits th
 
 ## Lessons learned
 
-1. Life withoutflexbox is not worth living
+1. Life without flexbox is not worth living
