@@ -1,0 +1,5 @@
+<div class="section">
+  <% feed = fetch("https://www.reddit.com/r/tldr/.rss") %>
+  <h2>TL;DR</h2> <span class="update-time">Updated: <%= update_time %></span>
+  <p><a href="<%= feed.entries[1].url %>"><%= feed.entries[1].title %></a></p>
+</div>
